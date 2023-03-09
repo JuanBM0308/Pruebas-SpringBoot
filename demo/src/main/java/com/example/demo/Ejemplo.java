@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 @RestController
 public class Ejemplo {
@@ -32,5 +33,34 @@ public class Ejemplo {
         vendidos.add(carro3);
         vendidos.add(carro4);
         return vendidos;
+    }
+
+    @GetMapping("/array")
+    public ArrayList ejemplo() {
+        Scanner op = new Scanner(System.in);
+        ArrayList<String> nombres = new ArrayList<String>();
+
+        System.out.print("Nombre de la persona: ");
+        String nombre = op.next();
+
+        System.out.print("Apellido de la persona: ");
+        String apellido = op.next();
+
+        System.out.print("Edad de la persona: ");
+        int edad = op.nextInt();
+
+        Personas persona = new Personas(nombre,apellido,edad);
+
+        nombres.add(String.valueOf(persona));
+        System.out.println(persona.toString());
+
+        /*
+        nombres.add("Johan");
+        nombres.add("Dom Pepe");
+        nombres.add("Joey");
+        nombres.add("Carlos Camacaro");
+        */
+
+        return nombres;
     }
 }
