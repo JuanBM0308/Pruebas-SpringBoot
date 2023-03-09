@@ -49,10 +49,10 @@ public class Ejemplo {
         System.out.print("Edad de la persona: ");
         int edad = op.nextInt();
 
-        Personas persona = new Personas(nombre,apellido,edad);
+        Personas persona1 = new Personas(nombre,apellido,edad);
 
-        nombres.add(String.valueOf(persona));
-        System.out.println(persona.toString());
+        nombres.add(String.valueOf(persona1));
+        System.out.println(persona1.toString());
 
         /*
         nombres.add("Johan");
