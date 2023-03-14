@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.Entidades;
 
 public class Personas {
 
