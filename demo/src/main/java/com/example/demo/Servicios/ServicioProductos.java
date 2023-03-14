@@ -9,6 +9,11 @@ public class ServicioProductos {
     private ArrayList<Productos> listado = new ArrayList<>();
 
     public ServicioProductos() {
+        listado.add(new Productos(1,"Durazno",30000,10,0,"Frutas"));
+        listado.add(new Productos(2,"Piña",4000,30,0,"Frutas"));
+        listado.add(new Productos(3,"Leche",15000,5,0,"Lacteos"));
+        listado.add(new Productos(4,"Arroz",10000,20,0,"Granos"));
+        listado.add(new Productos(5,"Frijol",11000,25,0,"Granos"));
         listado.add(new Productos(6,"Piña",3200.0,1,0,"Frutas"));
         listado.add(new Productos(7,"Pechuga De Pollo",5000.0,2,0,"Carnicos"));
         listado.add(new Productos(8,"Zanahoria",2200.0,12,0,"Vegetales"));
