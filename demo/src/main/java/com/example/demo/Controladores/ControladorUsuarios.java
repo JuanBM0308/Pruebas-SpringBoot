@@ -2,9 +2,7 @@ package com.example.demo.Controladores;
 
 import com.example.demo.Entidades.Usuario;
 import com.example.demo.Servicios.ServicioUsuarios;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -16,5 +14,10 @@ public class ControladorUsuarios {
     @GetMapping("/ListarUsuarios")
     public ArrayList<Usuario> listar(){
         return servicio.listar();
+    }
+
+    @PostMapping("/ ")
+    public String agregar(@RequestBody Usuario usuario) {
+        return servicio.AgregarUsuario(usuario);
     }
 }
