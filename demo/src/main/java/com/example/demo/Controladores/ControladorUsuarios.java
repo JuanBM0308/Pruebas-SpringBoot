@@ -16,7 +16,7 @@ public class ControladorUsuarios {
         return servicio.listar();
     }
 
-    @PostMapping("/ ")
+    @PostMapping("/AgregarUsuario")
     public String agregar(@RequestBody Usuario usuario) {
         return servicio.AgregarUsuario(usuario);
     }
