@@ -2,9 +2,7 @@ package com.example.demo.Controladores;
 
 import com.example.demo.Entidades.Carro;
 import com.example.demo.Servicios.ServicioCarros;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -17,5 +15,10 @@ public class ControladorCarros {
     @GetMapping("/lista_carros")
     public ArrayList<Carro> listar(){
         return servicio.listar_carros();
+    }
+
+    @PostMapping("/agregar_carros")
+    public String agregar_carros(@RequestBody Carro carro) {
+        return servicio.AgregarCarros(carro);
     }
 }

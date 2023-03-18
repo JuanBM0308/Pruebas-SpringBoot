@@ -18,5 +18,9 @@ public class ServicioCarros {
         return lista_carros;
     }
 
+    public String AgregarCarros(Carro car) {
+        lista_carros.add(car);
+        return "Registro Exitoso!";
+    }
 
 }
