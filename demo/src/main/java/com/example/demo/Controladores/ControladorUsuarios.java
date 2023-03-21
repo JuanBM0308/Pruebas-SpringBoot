@@ -20,4 +20,9 @@ public class ControladorUsuarios {
     public String agregar(@RequestBody Usuario usuario) {
         return servicio.AgregarUsuario(usuario);
     }
+
+    @GetMapping("/BuscarUsuario/{cod}")
+    public Usuario buscar_usuario(@PathVariable("cod") int codigo) {
+        return servicio.BuscarUsuario(codigo);
+    }
 }

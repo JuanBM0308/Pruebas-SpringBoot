@@ -23,4 +23,23 @@ public class ServicioCarros {
         return "Registro Exitoso!";
     }
 
+    public Carro BuscarCarrosPlaca(String placa) {
+        Carro car = null;
+        for (Carro c:lista_carros) {
+            if (c.getPlaca().equals(placa)){
+                car = c;
+            }
+        }
+        return car;
+    }
+
+    public Carro BuscarCarrosMarca(String marca) {
+        Carro car = null;
+        for (Carro c:lista_carros) {
+            if (c.getMarca().equals(marca)){
+                car = c;
+            }
+        }
+        return car;
+    }
 }
