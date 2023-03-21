@@ -23,4 +23,14 @@ public class ServicioUsuarios {
         lista.add(usu);
         return "Registro Exitoso";
     }
+
+    public Usuario buscarUsuario(int codigo){
+        Usuario usu = null;
+        for (Usuario u: lista) {
+            if(u.getId()==codigo){
+                usu = u;
+            }
+        }
+        return usu;
+    }
 }

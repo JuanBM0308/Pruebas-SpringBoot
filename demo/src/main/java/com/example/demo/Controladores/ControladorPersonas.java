@@ -24,4 +24,14 @@ public class ControladorPersonas {
         return servicio.AgregarPersonas(persona);
     }
 
+    @GetMapping("/BuscarPersona1/{edad}")
+    public Personas BuscarPersona1(@PathVariable("edad")int edad){
+         return servicio.BuscarPersona1(edad);
+    }
+
+    @GetMapping("/BuscarPersona2/{nom}")
+    public Personas BuscarPersona2(@PathVariable("nom")String nombre){
+        return servicio.BuscarPersona2(nombre);
+    }
+
 }

@@ -24,4 +24,24 @@ public class ServicioPersonas {
         ListaPersonas.add(persona);
         return "Se agrego correctamente";
     }
+
+    public Personas BuscarPersona1(int edad){
+        Personas persona = null;
+        for (Personas p: ListaPersonas) {
+            if (p.getEdad()==edad){
+                persona = p;
+            }
+        }
+        return  persona;
+    }
+
+    public Personas BuscarPersona2(String nombre){
+        Personas persona = null;
+        for (Personas p: ListaPersonas) {
+            if (p.getNombre().equals(nombre)){
+                persona = p;
+            }
+        }
+        return  persona;
+    }
 }
