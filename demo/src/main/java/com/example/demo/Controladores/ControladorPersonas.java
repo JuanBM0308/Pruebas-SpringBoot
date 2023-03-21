@@ -1,10 +1,9 @@
 package com.example.demo.Controladores;
 
+import com.example.demo.Entidades.Carro;
 import com.example.demo.Entidades.Personas;
 import com.example.demo.Servicios.ServicioPersonas;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -19,5 +18,10 @@ public class ControladorPersonas {
          return servicio.ListaPersonas();
      }
 
+    @PostMapping("/AgregarPersonas")
+    public String AgregarPerosna(@RequestBody Personas persona) {
+
+        return servicio.AgregarPersonas(persona);
+    }
 
 }

@@ -1,5 +1,6 @@
 package com.example.demo.Servicios;
 
+import com.example.demo.Entidades.Carro;
 import com.example.demo.Entidades.Personas;
 
 import java.util.ArrayList;
@@ -19,4 +20,8 @@ public class ServicioPersonas {
         return ListaPersonas;
     }
 
+    public String AgregarPersonas(Personas persona) {
+        ListaPersonas.add(persona);
+        return "Se agrego correctamente";
+    }
 }
