@@ -12,6 +12,8 @@ public class ServicioCarros {
         lista_carros.add(new Carro("RER 874","2019","BMW"));
         lista_carros.add(new Carro("ZZZ 000","2000","Chevrolet"));
         lista_carros.add(new Carro("AOU 541","2024","Mazda"));
+        lista_carros.add(new Carro("UAH 346","2008","Hyundai"));
+        lista_carros.add(new Carro("IKM 234","2000","Bocho"));
     }
 
     public ArrayList<Carro> listar_carros() {
@@ -41,5 +43,28 @@ public class ServicioCarros {
             }
         }
         return car;
+    }
+
+    public String EliminarCarrosPlaca(String placa) {
+        String val = "No se encontro el carro!";
+        for (Carro c:lista_carros) {
+            if (c.getPlaca().equals(placa)) {
+                lista_carros.remove(c);
+                val = "Eliminacion Exitosa!";
+            }
+        }
+        return val;
+    }
+
+    public String ModificarCarrosPlaca(Carro car) {
+        String val = "No se modifico el carro!";
+        Carro carroAux = BuscarCarrosPlaca(car.getPlaca());
+        if (BuscarCarrosPlaca(car.getPlaca()) != null){
+            carroAux.setPlaca(car.getPlaca());
+            carroAux.setModelo(car.getModelo());
+            carroAux.setMarca(car.getMarca());
+            val = "Modificacion exitosa!";
+        }
+        return val;
     }
 }

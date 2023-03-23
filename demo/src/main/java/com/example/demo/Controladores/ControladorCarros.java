@@ -33,4 +33,14 @@ public class ControladorCarros {
     public Carro buscar_carros_marca(@PathVariable("mar") String marca) {
         return servicio.BuscarCarrosMarca(marca);
     }
+
+    @DeleteMapping("/EliminarCarrosPlaca/{eli_plac}")
+    public String eliminar_carros_placa(@PathVariable("eli_plac") String placa) {
+        return servicio.EliminarCarrosPlaca(placa);
+    }
+
+    @PutMapping("/ModificarCarrosPlaca")
+    public String modificar_carros_placa(@RequestBody Carro carro){
+        return servicio.ModificarCarrosPlaca(carro);
+    }
 }
