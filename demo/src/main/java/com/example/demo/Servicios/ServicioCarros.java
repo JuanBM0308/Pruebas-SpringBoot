@@ -59,7 +59,7 @@ public class ServicioCarros {
     public String ModificarCarrosPlaca(Carro car) {
         String val = "No se modifico el carro!";
         Carro carroAux = BuscarCarrosPlaca(car.getPlaca());
-        if (BuscarCarrosPlaca(car.getPlaca()) != null){
+        if (carroAux != null){
             carroAux.setPlaca(car.getPlaca());
             carroAux.setModelo(car.getModelo());
             carroAux.setMarca(car.getMarca());
